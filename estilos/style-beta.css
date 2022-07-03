@@ -1,85 +1,63 @@
-/* *{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
-} */
+}
 .sidebar{
     position: relative;
-    width: 70px;
+    width: 60px;
     height: 100%;
     min-height: 100vh;
-    background-color: black;
-    box-shadow: 8px 0px 7px 1px rgba(13,255,244,0.78);
-    margin-left: -15px;
-    transition: all 0.5s;
+    background-color: blue;
+    box-shadow: 8px 0px 7px 1px rgba(0, 0, 0, 0.78);
     overflow-x: hidden;
+    transition: all 0.5s;
     position: fixed;
     z-index: 1;
+    margin-left: -12px;
 }
 .sidebar.active{
-    width: 220px;
+    width: 200px;
     transition: all 1.5s;
 }
-.sidebar .list-ul{
+.list{
+    padding-top: 50px;
+}
+.ul-list{
     list-style: none;
     padding-left: 0;
     padding-top: 20px;
 }
-.sidebar a{
-    color: aqua;
+.sidebar .enlace{
+    color: white;
     text-decoration: none;
     display: flex;
-    margin: 0 8px;
-    padding: 3px 0;
-}
-.sidebar a:hover{
-    color: aquamarine;
-    border: solid 1px;
-    border-radius: 5px;
-}
-.list{
-    padding-top: 40px;
 }
 .sidebar .icon{
-    padding-left: 13px;
+    padding-left: 15px;
 }
 .sidebar .title{
     padding-left: 30px;
     white-space: nowrap;
 }
-.sidebar .ul-title{
-    list-style: none;
-    padding-left: 0;
-}
-.sidebar h1{
-    display: flex;
-    color: aqua;
-}
-.sidebar .icon-1{
-    padding-left: 20px;
-}
-.sidebar .title-1{
-    padding-left: 25px;
-    white-space: nowrap;
-}
-.sidebar hr{
-    color: aqua;
-}
-/* bton-nav */
+/* bton */
 #bton{
     display: none;
 }
 .hamburger{
-    padding: 20px;
+    padding: 15px;
     position: relative;
     display: inline-flex;
     cursor: pointer;
-    justify-content: center;
-    margin-left: 15px;
+    margin-top: 20px;
+    /* margin-left: 10px; */
 }
 .line{
     position: absolute;
     width: 25px;
     height: 3px;
-    background-color: aqua;
+    background-color: white;
     border-radius: 3px;
     transition: transform 0.25s, opacity 0.35s;
 }
@@ -99,34 +77,24 @@
 #bton:checked~.line--bottom{
     transform: rotate(-45deg);
 }
-/* img cabeza */
 .Me img{
-    width: 100%;
+    width:100%;
     height: 250px;
     margin-left: 12px;
 }
 .sobre-mi{
     text-align: center;
-    color: aqua;
+    color: rgb(0, 0, 0);
     margin-left: 50px;
 }
 .sobre-mi img{
     border-radius: 50%;
 }
-/* letras */
-
-.logo{
-    background: linear-gradient(90deg, rgb(243, 210, 63), aqua );
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
 .cont-letras{
-    margin-left: 100px;
+    margin-left: 50px;
 }
 .cont-letras .letras{
-    color: aqua;
+    color: blue;
     position: relative;
     top: 60px;
     left: 10px;
@@ -161,4 +129,11 @@
     100%{
         top: -20px;
     }
+}
+.pie{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 50px;
+    z-index: 2;
 }
